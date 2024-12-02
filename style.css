@@ -1,84 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  .header {
-    background: #2c3e50;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 1rem;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero {
-    margin: 2rem 0;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
+    .hero p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
   
   .hero .btn {
-    background: #e74c3c;
-    color: white;
+    background: var(--minor-color);
+    color: black;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
   }
   
+  #sign-up{
+    background:  white;
+    color: var(--minor-color);
+    padding: 0.8rem 1.9rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: var(--minor-color);
+  }
 
   .main-content {
     padding: 2rem;
   }
   
+.mission h2 span, .services h2 span, .achievements h2 span, .team h2 span, .contact h2 span{
+    font-size: 2rem;
+    color: var(--minor-color);
+}
+.mission-img{
+    display: flex;
+}
+
+.mission{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 24px;
+    /* background: #F1FBFF; */
+    width: 100%;
+}
+
+.mission, .mission-img{
+    flex-basis:50% ;
+
+}
+.mission-img img{
+    border-radius: 10px;
+}
+  
+  .about-img{
+    background-color: cadetblue;
+    width: 100%;
+    min-height: 330px;
+    position: relative;
+}
+
+.about-img img{
+          position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+
+
   section {
     margin-bottom: 3rem;
   }
   
   section h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid var(--minor-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
   }
@@ -91,16 +86,25 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+  
   .team-members {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
   }
-  
-  .team-member img {
-    width: 100px;
-    border-radius: 50%;
-  }
+.team{
+    /* margin: 40px 0; */
+    margin-top: 100px;
+}
+
+
+.team-img img{
+   
+    border-radius: 20px;
+    margin: 0 auto;
+    
+    
+}
   
   .contact-form {
     display: flex;
@@ -116,18 +120,64 @@
   }
   
   .contact-form button {
-    background: #2c3e50;
+    background: var(--secondary-color);
     color: white;
     padding: 0.8rem;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+   
   }
   
   /* Footer */
   .footer {
-    background: #2c3e50;
+    background: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 1rem 0;
   }
+
+  /* Media Queries  */
+@media screen and (max-width: 768px) {
+
+    header{
+      /* padding: 10px 30px;
+       */
+           padding: 20px 40px;
+    }
+  
+    section{
+      padding: 40px;
+    }
+    .menu-btn {
+      display: block;
+      cursor: pointer; 
+    }
+  
+    .team-members {
+        display: block;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      
+      .mission-img{
+        display: block;
+    }
+
+    
+.mission{
+    display: block;
+    /* flex-wrap: wrap; */
+    gap: 24px;
+    /* background: #F1FBFF; */
+    width: 100%;
+    margin: auto;
+    font-size: 1rem;
+}
+.mission-img img{
+width: 300px;
+}
+
+}
+.team-img img{
+    width: 370px;
+}
